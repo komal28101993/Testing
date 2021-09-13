@@ -117,7 +117,7 @@ public class UserController
 	}
 	
 	@GetMapping(value ="/sort", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<List<UserResponse>> getAllUsersSortedByDOB(@RequestParam(name = "by", required = false) String colName)
+	public ResponseEntity<List<UserResponse>> getAllUsersSortedBy(@RequestParam(name = "by", required = false) String colName)
 	{
 		return new ResponseEntity<>(userService.getAllUsersSortedBy(colName),HttpStatus.OK);
 	
